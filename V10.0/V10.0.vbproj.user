@@ -25,6 +25,9 @@
     <Compile Update="FormsUse\Administracion\DepartamentosAdministracion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormsUse\Administracion\MarcasAdministracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormsUse\Administracion\SucursalesAdministracion.vb">
       <SubType>Form</SubType>
     </Compile>

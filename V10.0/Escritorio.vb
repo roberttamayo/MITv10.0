@@ -35,4 +35,8 @@
     Private Sub DepartamentosMenuItem_Click(sender As Object, e As EventArgs) Handles DepartamentosMenuItem.Click
         DepartamentosAdministracion.Show()
     End Sub
+
+    Private Sub MarcaMenuItem_Click(sender As Object, e As EventArgs) Handles MarcaMenuItem.Click
+        MarcasAdministracion.Show()
+    End Sub
 End Class
