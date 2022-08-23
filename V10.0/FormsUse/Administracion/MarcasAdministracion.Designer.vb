@@ -22,8 +22,9 @@ Partial Class MarcasAdministracion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MarcasAdministracion))
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DGVMarcas = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreMarcasCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EstatusMarcasCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,22 +40,33 @@ Partial Class MarcasAdministracion
         Me.LFechaH = New System.Windows.Forms.Label()
         Me.LEstatus = New System.Windows.Forms.Label()
         Me.LID = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BActualizar = New V10._0.CyButton()
+        Me.BCancelar = New V10._0.CyButton()
+        CType(Me.DGVMarcas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DGVMarcas
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.NombreMarcasCol, Me.EstatusMarcasCol, Me.fechaMarcaCol, Me.HoraMarcasCol})
-        Me.DataGridView1.Location = New System.Drawing.Point(23, 22)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(504, 193)
-        Me.DataGridView1.TabIndex = 0
+        Me.DGVMarcas.AllowUserToAddRows = False
+        Me.DGVMarcas.AllowUserToDeleteRows = False
+        Me.DGVMarcas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.DGVMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVMarcas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.NombreMarcasCol, Me.EstatusMarcasCol, Me.fechaMarcaCol, Me.HoraMarcasCol})
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGVMarcas.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DGVMarcas.Location = New System.Drawing.Point(23, 22)
+        Me.DGVMarcas.Name = "DGVMarcas"
+        Me.DGVMarcas.ReadOnly = True
+        Me.DGVMarcas.RowTemplate.Height = 25
+        Me.DGVMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGVMarcas.Size = New System.Drawing.Size(504, 193)
+        Me.DGVMarcas.TabIndex = 0
         '
         'ID
         '
@@ -106,7 +118,7 @@ Partial Class MarcasAdministracion
         Me.BAgregar.FlatAppearance.BorderSize = 0
         Me.BAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BAgregar.GrosorBorde = 1
-        Me.BAgregar.Location = New System.Drawing.Point(471, 408)
+        Me.BAgregar.Location = New System.Drawing.Point(471, 293)
         Me.BAgregar.Name = "BAgregar"
         Me.BAgregar.RedondeadoBorde = 0
         Me.BAgregar.Size = New System.Drawing.Size(100, 30)
@@ -188,6 +200,7 @@ Partial Class MarcasAdministracion
         '
         Me.LNombre.AutoSize = True
         Me.LNombre.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LNombre.ForeColor = System.Drawing.Color.White
         Me.LNombre.Location = New System.Drawing.Point(12, 256)
         Me.LNombre.Name = "LNombre"
         Me.LNombre.Size = New System.Drawing.Size(62, 19)
@@ -198,6 +211,7 @@ Partial Class MarcasAdministracion
         '
         Me.LFechaH.AutoSize = True
         Me.LFechaH.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LFechaH.ForeColor = System.Drawing.Color.White
         Me.LFechaH.Location = New System.Drawing.Point(12, 331)
         Me.LFechaH.Name = "LFechaH"
         Me.LFechaH.Size = New System.Drawing.Size(163, 19)
@@ -208,6 +222,7 @@ Partial Class MarcasAdministracion
         '
         Me.LEstatus.AutoSize = True
         Me.LEstatus.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LEstatus.ForeColor = System.Drawing.Color.White
         Me.LEstatus.Location = New System.Drawing.Point(305, 256)
         Me.LEstatus.Name = "LEstatus"
         Me.LEstatus.Size = New System.Drawing.Size(56, 19)
@@ -218,6 +233,7 @@ Partial Class MarcasAdministracion
         '
         Me.LID.AutoSize = True
         Me.LID.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LID.ForeColor = System.Drawing.Color.White
         Me.LID.Location = New System.Drawing.Point(295, 331)
         Me.LID.Name = "LID"
         Me.LID.Size = New System.Drawing.Size(17, 19)
@@ -225,12 +241,44 @@ Partial Class MarcasAdministracion
         Me.LID.Text = "0"
         Me.LID.Visible = False
         '
+        'BActualizar
+        '
+        Me.BActualizar.BackColor = System.Drawing.Color.Fuchsia
+        Me.BActualizar.ColorBorde = System.Drawing.Color.Purple
+        Me.BActualizar.FlatAppearance.BorderSize = 0
+        Me.BActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BActualizar.GrosorBorde = 1
+        Me.BActualizar.Location = New System.Drawing.Point(471, 329)
+        Me.BActualizar.Name = "BActualizar"
+        Me.BActualizar.RedondeadoBorde = 0
+        Me.BActualizar.Size = New System.Drawing.Size(100, 30)
+        Me.BActualizar.TabIndex = 20
+        Me.BActualizar.Text = "Actualizar"
+        Me.BActualizar.UseVisualStyleBackColor = False
+        '
+        'BCancelar
+        '
+        Me.BCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BCancelar.ColorBorde = System.Drawing.Color.Maroon
+        Me.BCancelar.FlatAppearance.BorderSize = 0
+        Me.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BCancelar.GrosorBorde = 1
+        Me.BCancelar.Location = New System.Drawing.Point(471, 408)
+        Me.BCancelar.Name = "BCancelar"
+        Me.BCancelar.RedondeadoBorde = 0
+        Me.BCancelar.Size = New System.Drawing.Size(100, 30)
+        Me.BCancelar.TabIndex = 21
+        Me.BCancelar.Text = "Cancelar"
+        Me.BCancelar.UseVisualStyleBackColor = False
+        '
         'MarcasAdministracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.BCancelar)
+        Me.Controls.Add(Me.BActualizar)
         Me.Controls.Add(Me.LID)
         Me.Controls.Add(Me.LEstatus)
         Me.Controls.Add(Me.LFechaH)
@@ -241,18 +289,18 @@ Partial Class MarcasAdministracion
         Me.Controls.Add(Me.CTEstatus)
         Me.Controls.Add(Me.TBNombre)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.ForeColor = System.Drawing.Color.White
+        Me.Controls.Add(Me.DGVMarcas)
+        Me.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MarcasAdministracion"
         Me.Text = "Administracion de Marcas de ropa"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVMarcas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGVMarcas As DataGridView
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BAgregar As CyButton
     Friend WithEvents CTEstatus As CyTogle_
@@ -268,4 +316,6 @@ Partial Class MarcasAdministracion
     Friend WithEvents LFechaH As Label
     Friend WithEvents LEstatus As Label
     Friend WithEvents LID As Label
+    Friend WithEvents BActualizar As CyButton
+    Friend WithEvents BCancelar As CyButton
 End Class
